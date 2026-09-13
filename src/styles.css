@@ -190,3 +190,13 @@ body{background-color:var(--bg);background-repeat:no-repeat;background-attachmen
 /* night/calm/pastel can reuse same images or be customized; ensure contrast */
 :root[data-theme='night'] body.bg-dashboard{filter:brightness(.9)}
 
+/* Dashboard hero and small icon overlays */
+.dashboard-hero-top{display:flex;align-items:center;gap:12px;margin:8px 0 18px}
+.app-icon{width:64px;height:64px;border-radius:12px;box-shadow:0 10px 24px rgba(91,110,246,0.08)}
+.dashboard-hero-top .hero-text h1{margin:0;font-size:20px;color:var(--primary)}
+.dashboard-hero-top .hero-text .muted{font-size:14px}
+.thumb-wrap{position:relative;width:96px;height:76px}
+.thumb-wrap img{display:block;border-radius:10px}
+.thumb-wrap .type-icon{position:absolute;right:6px;bottom:6px;width:26px;height:26px;border-radius:6px;box-shadow:0 6px 12px rgba(16,24,40,0.08)}
+
+
