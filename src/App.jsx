@@ -20,23 +20,28 @@ import FloatingLogout from './components/FloatingLogout'
 
 export default function App() {
   const navigate = useNavigate()
+  const location = useLocation()
 
   return (
     <ThemeProvider>
       <div className="app-root">
         <header className="topbar">
           <Link to="/dashboard" className="home-link" aria-label="Go to home"><Logo /></Link>
-          <nav className="nav" aria-label="Main navigation">
-            <Link className="nav-btn" to="/memories">Memories</Link>
-            <Link className="nav-btn" to="/people">People</Link>
-            <Link className="nav-btn" to="/places">Places</Link>
-            <Link className="nav-btn" to="/assistant">AI Assistant</Link>
-            <Link className="nav-btn" to="/settings">Settings</Link>
-          </nav>
-          <div className="top-controls">
-            <ThemeToggle />
-            <button className="logout-btn" onClick={() => { localStorage.removeItem('echomind-theme'); navigate('/'); }} title="Logout">Log out</button>
-          </div>
+          {location.pathname !== '/' && (
+            <>
+              <nav className="nav" aria-label="Main navigation">
+                <Link className="nav-btn" to="/memories">Memories</Link>
+                <Link className="nav-btn" to="/people">People</Link>
+                <Link className="nav-btn" to="/places">Places</Link>
+                <Link className="nav-btn" to="/assistant">AI Assistant</Link>
+                <Link className="nav-btn" to="/settings">Settings</Link>
+              </nav>
+              <div className="top-controls">
+                <ThemeToggle />
+                <button className="logout-btn" onClick={() => { localStorage.removeItem('echomind-theme'); navigate('/'); }} title="Logout">Log out</button>
+              </div>
+            </>
+          )}
         </header>
 
         <main className="main">
