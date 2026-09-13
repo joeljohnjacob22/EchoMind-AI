@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#FFDDAA" />
+      <stop offset="100%" stop-color="#A8D8FF" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#fff8f2"/>
+  <g transform="translate(40,40)">
+    <rect x="0" y="360" width="720" height="160" rx="20" fill="#eaf6ef" />
+    <g>
+      <circle cx="120" cy="300" r="80" fill="#a3d9a5" />
+      <circle cx="220" cy="260" r="100" fill="#8bd6ff" />
+      <rect x="360" y="200" width="220" height="120" rx="12" fill="url(#g)" />
+    </g>
+    <text x="18" y="48" font-family="Arial" font-size="36" fill="#5b6ef6">Munnar — Family Trip</text>
+  </g>
+</svg>
