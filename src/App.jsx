@@ -30,11 +30,11 @@ export default function App() {
           {location.pathname !== '/' && (
             <>
               <nav className="nav" aria-label="Main navigation">
-                <Link className="nav-btn" to="/memories">Memories</Link>
-                <Link className="nav-btn" to="/people">People</Link>
-                <Link className="nav-btn" to="/places">Places</Link>
-                <Link className="nav-btn" to="/assistant">AI Assistant</Link>
-                <Link className="nav-btn" to="/settings">Settings</Link>
+                <Link className="nav-btn" to="/memories"><span className="nav-icon">🖼️</span><span>Memories</span></Link>
+                <Link className="nav-btn" to="/people"><span className="nav-icon">👥</span><span>People</span></Link>
+                <Link className="nav-btn" to="/places"><span className="nav-icon">📍</span><span>Places</span></Link>
+                <Link className="nav-btn" to="/assistant"><span className="nav-icon">✨</span><span>AI Assistant</span></Link>
+                <Link className="nav-btn" to="/settings"><span className="nav-icon">⚙️</span><span>Settings</span></Link>
               </nav>
               <div className="top-controls">
                 <ThemeToggle />

@@ -12,12 +12,11 @@ export default function Places({ onOpenMemory }) {
         {places.map(p => (
           <article key={p.id} className="place-card large">
             <div className="place-thumb" aria-hidden>📍</div>
-            <div>
+            <div className="place-body">
+              <span className="place-tag">Favorite place</span>
               <strong>{p.name}</strong>
               <div className="muted">{p.label}</div>
-              <div className="row">
-                <button className="large-btn" onClick={() => onOpenMemory && onOpenMemory(null)}>Show Memories</button>
-              </div>
+              <button className="large-btn secondary" onClick={() => onOpenMemory && onOpenMemory(null)}>Show memories</button>
             </div>
           </article>
         ))}

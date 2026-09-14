@@ -17,9 +17,10 @@ export default function Gallery({ onOpenMemory }) {
       ) : (
         <div className="masonry">
           {filtered.map(m => (
-            <article key={m.id} className="memory-card masonry-item" onClick={() => onOpenMemory(m)}>
-              <img src={m.thumbnail} alt="" />
-              <div>
+            <article key={m.id} className="memory-card masonry-item memory-tile" onClick={() => onOpenMemory(m)}>
+              <img src={m.thumbnail} alt={m.title} />
+              <div className="memory-overlay">
+                <span className="memory-tag">{m.type}</span>
                 <strong>{m.title}</strong>
                 <div className="muted">{m.date} • {m.location}</div>
               </div>

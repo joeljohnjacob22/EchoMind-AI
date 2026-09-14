@@ -11,13 +11,12 @@ export default function People({ onOpenMemory }) {
       <div className="people-grid">
         {people.map(p => (
           <article key={p.id} className="person-card large">
-            <img src={p.photo} alt="" />
-            <div>
+            <img src={p.photo} alt={p.name} />
+            <div className="person-body">
+              <span className="person-tag">{p.relation}</span>
               <strong>{p.name}</strong>
-              <div className="muted">{p.relation} • {p.count} memories</div>
-              <div className="row">
-                <button className="large-btn" onClick={() => onOpenMemory(memories[0])}>Show Memories</button>
-              </div>
+              <div className="muted">{p.count} memories shared</div>
+              <button className="large-btn secondary" onClick={() => onOpenMemory(memories[0])}>View memories</button>
             </div>
           </article>
         ))}
