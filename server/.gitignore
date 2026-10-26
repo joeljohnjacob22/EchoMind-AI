@@ -1,0 +1,9 @@
+node_modules/
+uploads/
+*.env
+!.env.example
+firebase-service-account.json
+logs/
+*.log
+coverage/
+dist/

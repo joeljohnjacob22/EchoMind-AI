@@ -1,8 +1,41 @@
+# Dependencies
 node_modules/
-dist/
-.vscode/
+**/node_modules/
+
+# Environment files and credentials
+*.env
 .env
+**/.env
+**/*.env
+!**/.env.example
+*.pem
+*.key
+firebase-service-account*.json
+**/firebase-service-account*.json
+
+# Build outputs
+dist/
+**/dist/
+build/
+**/build/
+
+# Uploads & User generated media
+uploads/
+**/uploads/
+
+# Logs
+logs/
+**/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS & Editor
 .DS_Store
-npm-debug.log
-package-lock.json
+Thumbs.db
+.vscode/
+.idea/
 *.local
+test_upload.js
+test.jpg
